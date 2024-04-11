@@ -9,7 +9,7 @@ ContextMap HotelVacacional{
 
     GestionLimpiezaContext [P]<->[P] GestionMantenimientoContext
     /*Conformista*/
-    GestionReservasContext [U]->[D] GestionRecepcionContext
+    GestionReservasContext [U]->[D,CF] GestionRecepcionContext
 
     GestionAdministracionFinanzasContext [ACL]<- GestionReservasContext 
     /*Open Host service*/

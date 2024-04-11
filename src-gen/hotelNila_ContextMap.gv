@@ -1,12 +1,12 @@
 digraph "ContextMapGraph" {
 graph ["imagepath"="/tmp/GraphvizJava"]
-"GestionAdministracionFinanzasContext" ["margin"="0.3","orientation"="261","shape"="egg","fontsize"="16","style"="bold","label"="GestionAdministracionFinanzasContext\n","fontname"="sans-serif"]
-"GestionComprasContext" ["margin"="0.3","orientation"="18","shape"="egg","fontsize"="16","style"="bold","label"="GestionComprasContext\n","fontname"="sans-serif"]
-"GestionLimpiezaContext" ["margin"="0.3","orientation"="190","shape"="egg","fontsize"="16","style"="bold","label"="GestionLimpiezaContext\n","fontname"="sans-serif"]
-"GestionMantenimientoContext" ["margin"="0.3","orientation"="48","shape"="egg","fontsize"="16","style"="bold","label"="GestionMantenimientoContext\n","fontname"="sans-serif"]
-"GestionReservasContext" ["margin"="0.3","orientation"="197","shape"="egg","fontsize"="16","style"="bold","label"="GestionReservasContext\n","fontname"="sans-serif"]
-"GestionRecepcionContext" ["margin"="0.3","orientation"="265","shape"="egg","fontsize"="16","style"="bold","label"="GestionRecepcionContext\n","fontname"="sans-serif"]
-"GestionMarketingContext" ["margin"="0.3","orientation"="251","shape"="egg","fontsize"="16","style"="bold","label"="GestionMarketingContext\n","fontname"="sans-serif"]
+"GestionAdministracionFinanzasContext" ["margin"="0.3","orientation"="208","shape"="egg","fontsize"="16","style"="bold","label"="GestionAdministracionFinanzasContext\n","fontname"="sans-serif"]
+"GestionComprasContext" ["margin"="0.3","orientation"="329","shape"="egg","fontsize"="16","style"="bold","label"="GestionComprasContext\n","fontname"="sans-serif"]
+"GestionLimpiezaContext" ["margin"="0.3","orientation"="233","shape"="egg","fontsize"="16","style"="bold","label"="GestionLimpiezaContext\n","fontname"="sans-serif"]
+"GestionMantenimientoContext" ["margin"="0.3","orientation"="254","shape"="egg","fontsize"="16","style"="bold","label"="GestionMantenimientoContext\n","fontname"="sans-serif"]
+"GestionReservasContext" ["margin"="0.3","orientation"="163","shape"="egg","fontsize"="16","style"="bold","label"="GestionReservasContext\n","fontname"="sans-serif"]
+"GestionRecepcionContext" ["margin"="0.3","orientation"="59","shape"="egg","fontsize"="16","style"="bold","label"="GestionRecepcionContext\n","fontname"="sans-serif"]
+"GestionMarketingContext" ["margin"="0.3","orientation"="131","shape"="egg","fontsize"="16","style"="bold","label"="GestionMarketingContext\n","fontname"="sans-serif"]
 "GestionComprasContext" -> "GestionAdministracionFinanzasContext" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
 "GestionLimpiezaContext" -> "GestionMantenimientoContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
 "GestionMantenimientoContext" -> "GestionReservasContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
@@ -14,13 +14,13 @@ graph ["imagepath"="/tmp/GraphvizJava"]
 </table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
 <tr><td bgcolor="white">U</td></tr>
 </table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
-"GestionReservasContext" -> "GestionRecepcionContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
-<tr><td bgcolor="white">D</td></tr>
+"GestionReservasContext" -> "GestionAdministracionFinanzasContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
 </table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
 <tr><td bgcolor="white">U</td></tr>
 </table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
-"GestionReservasContext" -> "GestionAdministracionFinanzasContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
-<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+"GestionReservasContext" -> "GestionRecepcionContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
 </table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
 <tr><td bgcolor="white">U</td></tr>
 </table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
