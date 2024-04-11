@@ -1,32 +1,36 @@
-ContextMap AcmeEcommerceMap{
-    contains GestionOrdenesContext
-    contains GestionEnviosContext
-    contains GestionClientesContext
-    contains GestionPagosContext
-    contains GestionAutorizacionAutenticacionContext
-    contains CatalogoProductosContext
+ContextMap HotelVacacional{
+    contains GestionLimpiezaContext
+    contains GestionMantenimientoContext
+    contains GestionReservasContext
+    contains GestionRecepcionContext
+    contains GestionAdministracionFinanzasContext
+    contains GestionMarketingContext
+    contains GestionComprasContext
 
-    /* Cooperacion */
-    GestionClientesContext [P]<->[P] GestionEnviosContext
-    GestionOrdenesContext [P]<->[P] GestionClientesContext
-    GestionOrdenesContext [P]<->[P] GestionPagosContext
+    GestionLimpiezaContext [P]<->[P] GestionMantenimientoContext
     /*Conformista*/
-    GestionClientesContext [CF]<-[PL] GestionAutorizacionAutenticacionContext
-    /*Anti-corruption layer*/
+    GestionReservasContext [U]->[D] GestionRecepcionContext
 
-    /*Open Host service */
-    CatalogoProductosContext[U, OHS]->[D] GestionOrdenesContext
+    GestionAdministracionFinanzasContext [ACL]<- GestionReservasContext 
+    /*Open Host service*/
+    GestionMarketingContext  [U, OHS]->[D] GestionRecepcionContext
+    
+    GestionComprasContext [SK]<->[SK] GestionAdministracionFinanzasContext
+
+    GestionReservasContext [D, ACL]<-[U] GestionMantenimientoContext
     
 }
-BoundedContext GestionOrdenesContext{
+BoundedContext GestionLimpiezaContext{
 }
-BoundedContext GestionEnviosContext{
+BoundedContext GestionMantenimientoContext{
 }
-BoundedContext GestionClientesContext{
+BoundedContext GestionReservasContext{
 }
-BoundedContext GestionPagosContext{
+BoundedContext GestionRecepcionContext{
 }
-BoundedContext GestionAutorizacionAutenticacionContext{
+BoundedContext GestionAdministracionFinanzasContext{
 }
-BoundedContext CatalogoProductosContext{
+BoundedContext GestionMarketingContext{
+}
+BoundedContext GestionComprasContext{
 }
