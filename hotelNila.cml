@@ -1,4 +1,4 @@
-ContextMap HotelVacacional{
+ContextMap HotelZafiro{
     contains GestionLimpiezaContext
     contains GestionMantenimientoContext
     contains GestionReservasContext
