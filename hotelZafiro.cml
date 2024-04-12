@@ -1,15 +1,22 @@
 ContextMap HotelZafiro{
+    contains GestionAtencionClienteContext
     contains GestionLimpiezaContext
     contains GestionMantenimientoContext
     contains GestionReservasContext
     contains GestionRecepcionContext
     contains GestionAdministracionFinanzasContext
+    contains GestionFacturacionContext
+    contains GestionAutorizacionAutenticacionContext
     contains GestionMarketingContext
     contains GestionComprasContext
 
     GestionLimpiezaContext [P]<->[P] GestionMantenimientoContext
+    GestionFacturacionContext [P]<->[P] GestionReservasContext
     /*Conformista*/
     GestionReservasContext [U]->[D,CF] GestionRecepcionContext
+    GestionAtencionClienteContext [U]->[D,CF] GestionReservasContext
+    GestionAutorizacionAutenticacionContext [U]->[D,CF] GestionRecepcionContext
+    GestionAutorizacionAutenticacionContext [U]->[D,CF] GestionFacturacionContext
 
     GestionAdministracionFinanzasContext [ACL]<- GestionReservasContext 
     /*Open Host service*/
@@ -20,6 +27,8 @@ ContextMap HotelZafiro{
     GestionReservasContext [D, ACL]<-[U] GestionMantenimientoContext
     
 }
+BoundedContext GestionAtencionClienteContext{
+}
 BoundedContext GestionLimpiezaContext{
 }
 BoundedContext GestionMantenimientoContext{
@@ -29,6 +38,10 @@ BoundedContext GestionReservasContext{
 BoundedContext GestionRecepcionContext{
 }
 BoundedContext GestionAdministracionFinanzasContext{
+}
+BoundedContext GestionFacturacionContext{
+}
+BoundedContext GestionAutorizacionAutenticacionContext{
 }
 BoundedContext GestionMarketingContext{
 }
